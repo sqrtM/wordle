@@ -1,0 +1,23 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.word-line {
+  display: flex;
+}
+
+.letter-block {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+}

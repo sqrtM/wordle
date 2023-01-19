@@ -19,7 +19,7 @@ function reducer(state: turnWord[], action: turnWord) {
 }
 
 export default function GameBoard() {
-  const word = "NUTTY";
+  const GOAL_WORD = "NUTTY";
   const [inputState, setInputState] = useState<string>('');
   const [turn, setTurn] = useState<number>(0);
   const [state, dispatch] = useReducer<(reducer: turnWord[], action: turnWord) => turnWord[]>(reducer, initialState);
@@ -41,12 +41,12 @@ export default function GameBoard() {
   return (
     <div>
       <div className="game-board">
-        <WordLine word={state[0].word} />
-        <WordLine word={state[1].word} />
-        <WordLine word={state[2].word} />
-        <WordLine word={state[3].word} />
-        <WordLine word={state[4].word} />
-        <WordLine word={state[5].word} />
+        <WordLine word={state[0].word} goalWord={GOAL_WORD} />
+        <WordLine word={state[1].word} goalWord={GOAL_WORD} />
+        <WordLine word={state[2].word} goalWord={GOAL_WORD} />
+        <WordLine word={state[3].word} goalWord={GOAL_WORD} />
+        <WordLine word={state[4].word} goalWord={GOAL_WORD} />
+        <WordLine word={state[5].word} goalWord={GOAL_WORD} />
       </div>
 
       <div>
